@@ -21,7 +21,7 @@ const [manufacturer, setManufacturer] = useState('');
 const [model, setmodel] = useState('');
 
 //filter states
-const [fuel, setFuel] = useState("");
+const [fuel, setFuel] = useState({fuel: ''});
 const [year, setYear] = useState(2020);
 
 //pagination
