@@ -21,7 +21,7 @@ const [manufacturer, setManufacturer] = useState('');
 const [model, setmodel] = useState('');
 
 //filter states
-const [fuel, setFuel] = useState('');
+const [fuel, setFuel] = useState("");
 const [year, setYear] = useState(2020);
 
 //pagination
@@ -52,10 +52,7 @@ const getCars = async () => {
 useEffect(() => {
   getCars();
   
-}, [manufacturer, fuel, year, limit, model])
-
-
- const isDataEmpty = !Array.isArray(allCars)  || allCars.length < 1 || !allCars;
+}, [manufacturer, fuel, year, limit, model]);
 
   return (
     <main className="overflow-hidden ">
@@ -71,8 +68,8 @@ useEffect(() => {
           <div className="home__filters">
             <SearchBar setManufacturer={setManufacturer} setModel={setmodel}/>
             <div className="home__filter-container">
-              <CustomFilter title="fuel" options={fuels} setFilter={setFuel}/>
-              <CustomFilter title="year" options={yearsOfProduction} setFilter={setYear}/>
+              <CustomFilter options={fuels} setFilter={setFuel}/>
+              <CustomFilter options={yearsOfProduction} setFilter={setYear}/>
             </div>
           </div>.
 
